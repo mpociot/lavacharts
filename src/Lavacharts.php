@@ -55,7 +55,8 @@ class Lavacharts
         'DonutChart',
         'GaugeChart',
         'GeoChart',
-        'LineChart'
+        'LineChart',
+        'Table'
     );
 
     /**

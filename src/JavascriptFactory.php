@@ -283,6 +283,12 @@ class JavascriptFactory
                 $package['version'] = '1';
                 break;
 
+            case 'Table':
+                $package['type']    = 'table';
+                $package['jsObj']   = 'Table';
+                $package['version'] = '1.1';
+                break;
+
             default:
                 $package['type']    = 'corechart';
                 $package['jsObj']   = $this->chart->type;
