@@ -35,11 +35,34 @@ class Table extends Chart
             array(
                 //                'animation',
                 'focusTarget',
+                'showRowNumber',
                 'width',
                 'height',
                 'isHtml',
             )
         );
+    }
+
+
+
+    /**
+     *
+     * @param  bool               $showRowNumber
+     * @throws InvalidConfigValue
+     * @return $this
+     */
+    public function showRowNumber($showRowNumber)
+    {
+        if (is_bool($showRowNumber)) {
+            $this->addOption(array('showRowNumber' => $showRowNumber));
+        } else {
+            throw $this->invalidConfigValue(
+                __FUNCTION__,
+                'bool'
+            );
+        }
+
+        return $this;
     }
 
     /**
