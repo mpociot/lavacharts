@@ -77,7 +77,11 @@ window.lava = (function() {
     timer = setTimeout(function() {
       for(var c = 0; c < lava.registeredCharts.length; c++) {
         var parts = lava.registeredCharts[c].split(':');
-
+        
+        if (!lava.charts[parts[0]][parts[1]].chart) {
+          lava.charts[parts[0]][parts[1]].init();
+        }
+        
         lava.charts[parts[0]][parts[1]].chart.draw(
           lava.charts[parts[0]][parts[1]].data,
           lava.charts[parts[0]][parts[1]].options
