@@ -222,7 +222,7 @@ class JavascriptFactory
         ).PHP_EOL;
 
         $out .= sprintf(
-            "google.load('visualization', '%s', {'packages':['%s'], callback: lava.charts.%s['%s'].init});",
+            "google.load('visualization', '%s', {'packages':['corechart','table','%s'], callback: lava.charts.%s['%s'].init});",
             $this->getChartPackageData('version'),
             $this->getChartPackageData('type'),
             $this->chart->type,
